@@ -4,6 +4,8 @@ import com.example.dagger2jakewharton.Timeline;
 import com.example.dagger2jakewharton.Tweeter;
 import com.example.dagger2jakewharton.TwitterApi;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -15,12 +17,13 @@ public class TwitterModule {
     public TwitterModule(String user) {
         this.user = user;
     }
-    @Provides
+
+    @Provides @Singleton
     Tweeter provideTweeter(TwitterApi twitterApi){
         return new Tweeter(twitterApi, user);
     }
 
-    @Provides
+    @Provides @Singleton
     Timeline providesTimeline(TwitterApi twitterApi) {
         return new Timeline(twitterApi, user);
     }
