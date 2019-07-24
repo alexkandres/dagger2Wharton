@@ -2,8 +2,10 @@ package com.example.dagger2jakewharton.dagger;
 
 import com.example.dagger2jakewharton.Timeline;
 import com.example.dagger2jakewharton.Tweeter;
+import javax.inject.Singleton;
 import dagger.Component;
 
+@Singleton
 @Component(modules = {
         NetworkModule.class,
         TwitterModule.class
