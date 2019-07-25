@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.dagger2jakewharton.dagger.MyApp;
+
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,5 +17,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ((MyApp)getApplication()).getTwitterComponent().inject(this);
+
+        tweeter.tweet("first tweet");
     }
 }
