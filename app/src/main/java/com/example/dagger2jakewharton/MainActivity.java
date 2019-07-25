@@ -21,5 +21,6 @@ public class MainActivity extends AppCompatActivity {
         ((MyApp)getApplication()).getTwitterComponent().inject(this);
 
         tweeter.tweet("first tweet");
+        timeline.getTimelineForUser("getting timeline");
     }
 }
