@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     //c1
     //c2
     //c3
+    //g1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
