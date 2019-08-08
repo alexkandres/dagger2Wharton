@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Inject Tweeter tweeter;
     @Inject Timeline timeline;
     //c1
+    //c2
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
